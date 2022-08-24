@@ -24,5 +24,12 @@ public class PostService {
     public List<Post> findByTitle(String text){
         return repository.findByTitleContainingIgnoreCase(text);
     }
+    /*
+
+    *method using query mongoDb
+    **/
+    public List<Post> searchtitle(String text){
+        return repository.searchTitle(text);
+    }
 
 }
